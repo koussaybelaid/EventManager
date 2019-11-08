@@ -1,0 +1,74 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+	<ui:param name="page_name" value="User account sign in" />
+	<ui:define name="content">
+		<h:form>
+			<centre>
+			<div class="row clearfix">
+				
+			 
+
+			<div class="form-group col-md-6">
+				<h:outputLabel for="username">User Name </h:outputLabel>
+				<h:inputText class="form-control"  placeholder="Nom"
+					value="#{employeeBean.username}">
+				</h:inputText>
+			</div>
+			<div class="form-group col-md-6">
+				<h:outputLabel for="FirstName">First Name </h:outputLabel>
+				<h:inputText class="form-control"  placeholder="FirstName"
+					value="#{employeeBean.firstName}">
+				</h:inputText>
+			</div>
+			<div class="form-group col-md-6">
+				<h:outputLabel value="" for="LAstName">Last Name </h:outputLabel>
+				<h:inputText class="form-control"  placeholder="LastName"
+					value="#{employeeBean.lastName}">
+				</h:inputText>
+			</div>
+			<div class="form-group col-md-6">
+				<h:outputLabel value="" for="Cin">National Identification Number </h:outputLabel>
+				<h:inputText class="form-control"  placeholder="Cin"
+					value="#{employeeBean.cin}">
+				</h:inputText>
+			</div>
+			<div class="form-group col-md-6">
+				<h:outputLabel value="" for="PhoneNumber">Phone Number </h:outputLabel>
+				<h:inputText class="form-control"  placeholder="PhoneNumber"
+					value="#{employeeBean.phonenumber}">
+				</h:inputText>
+			</div>
+			<div class="form-group col-md-6">
+				<h:outputLabel value="" for="PAssword">Password </h:outputLabel>
+				<h:inputSecret class="form-control"  placeholder="Password"
+					value="#{employeeBean.password}">
+				</h:inputSecret>
+			</div>
+			<div class="form-group col-md-6">
+				<h:outputLabel value="" for="Role">Acount Role    </h:outputLabel>
+				<h:selectOneMenu value="#{employeeBean.role}">
+					<f:selectItems value="#{dataff.role}" />
+				</h:selectOneMenu>
+			</div>
+		
+
+			</div>
+				<h:commandButton value="Add User" icon="plus-sign"
+					action="#{employeeBean.addEmployee()}" styleClass="btn btn-primary btn-lg btn-block" />
+
+			
+
+			
+				<h:commandButton value="Update" icon="plus-sign"
+					action="#{employeeBean.updateUser(UserId)}" styleClass="btn btn-primary btn-lg btn-block" />
+			
+			
+			
+			</centre>
+		</h:form>
+	</ui:define>
+</ui:composition>

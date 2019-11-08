@@ -1,0 +1,76 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+		<h:panelGroup columns="2">
+			<h:form>
+				<h:dataTable value="#{employeeBean.employees}" var="e" border="0"
+				class="table table-hover table-vcenter table-striped" cellspacing="0" id="addrowExample">
+
+					<h:column class="gradeA">
+					<f:facet name="header">
+							<h:outputText value="First Name   " />
+						</f:facet>
+						<h:outputText value="#{e.firstName}" />
+					</h:column>
+
+
+					<h:column class="gradeA">
+						<f:facet name="header">
+							<h:outputText value="Last Name   " />
+						</f:facet>
+						<h:outputText value="#{e.lastName}" />
+					</h:column>
+					<h:column class="gradeA">
+						<f:facet name="header">
+							<h:outputText value="User Name   " />
+						</f:facet>
+						<h:outputText value="#{e.username}" />
+					</h:column>
+
+					<h:column class="gradeA">
+						<f:facet name="header">
+							<h:outputText value="Role" />
+						</f:facet>
+						<h:outputText value="#{e.role}" />
+					</h:column>
+					<h:column class="gradeA">
+						<f:facet name="header">
+							<h:outputText value="National Identification" />
+						</f:facet>
+						<h:outputText value="#{e.cin}" />
+					</h:column>
+
+					<h:column class="gradeA">
+						<f:facet name="header">
+							<h:outputText value="Phone Number" />
+						</f:facet>
+						<h:outputText value="#{e.phonenumber}" />
+					</h:column>
+					<h:column class="gradeA">
+						<f:facet name="header">
+							<h:outputText value="Passworld" />
+						</f:facet>
+						<h:outputText value="#{e.password}" />
+					</h:column>
+
+					<h:column class="gradeA">
+						<h:commandButton class="btn btn-primary mb-15" action="#{employeeBean.removeEmployee(e.id)}"
+							value="Delete" />
+
+						
+					</h:column>
+					<h:column class="gradeA">
+					<h:commandButton class="btn btn-primary mb-15" action="#{employeeBean.displayUsers(e)}"
+							value="Edit" />
+							</h:column>
+				</h:dataTable>
+			</h:form>
+		</h:panelGroup>
+	</ui:define>
+
+
+</ui:composition>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+
+<h:head>
+	<title>Hr Management</title>
+
+	<!-- Bootstrap Core and vandor -->
+	<link rel="stylesheet"
+		href="../resources/assets/plugins/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="../resources/assets/css//font-awesome.min.css" />
+	<!-- Core css -->
+	<link rel="stylesheet" href="../resources/assets/css/main.css" />
+	<link rel="stylesheet" href="../resources/assets/css/theme2.css" />
+	<script type="text/javascript" src="../resources/assets/js/core.js"></script>
+</h:head>
+
+<h:body>
+	<ui:include src="../template/header.xhtml"></ui:include>
+
+	<div class="page">
+		<ui:insert name="content" />
+
+		<ui:include src="../template/footer.xhtml"></ui:include>
+	</div>
+
+	<script src="../resources/assets/bundles/lib.vendor.bundle.js"></script>
+	<script src="../resources/assets/js/core.js"></script>
+</h:body>
+
+</html>

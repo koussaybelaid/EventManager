@@ -1,0 +1,25 @@
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui" template="/template/template.xhtml">
+
+
+
+
+	<ui:define name="main">
+
+		<h:form>
+			<h1>Statistiques sur les types des sujets</h1>
+
+			<p:chart type="pie" model="#{chartView.pieModel1}"
+				style="width:400px;height:300px" />
+
+			<p:chart type="pie" model="#{chartView.pieModel2}"
+				style="width:400px;height:300px" />
+
+		</h:form>
+	</ui:define>
+</ui:composition>
